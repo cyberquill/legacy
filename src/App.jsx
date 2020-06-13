@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './React Components/Pages/Home/Home';
+import About from './React Components/Pages/About/About';
 
 
 class App extends Component {
@@ -11,9 +12,10 @@ class App extends Component {
 
     render() {
         return (
-            <Router>
+            <Router basename='/'>
                 <Switch>
-                    <Route exact path='/portfolio' component={Home} />
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/about' component={About} />
                 </Switch>
             </Router>
         );
