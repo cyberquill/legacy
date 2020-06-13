@@ -13,7 +13,6 @@ class App extends Component {
     render() {
         return (
             <Router basename={process.env.PUBLIC_URL}>
-                <div className='xaz'>Hey It's Me! |{process.env.PUBLIC_URL}| </div>
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/about' component={About} />

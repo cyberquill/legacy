@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import './home.scss';
+import Landing from '../../Layout/Landing/Landing';
+import Experience from '../../Layout/Experience/Experience';
 
 class Home extends Component {
     render() {
         return (
             <div className='home'>
-                Welcome Home
-                <Link to='/about'>Go to About</Link>
+                <Landing />
+                <Experience />
             </div>
         );
     }
