@@ -20,7 +20,7 @@ class Home extends Component {
             this.setState({ showLoader: false, showPage: true });
         }, 5000);
         this.setState({ showLoader: true });
-        window.addEventListener('scroll', this.scrollHandler);
+        // this.setState({ showLoader: false, showPage: true });
     }
 
     render() {

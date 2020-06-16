@@ -24,14 +24,14 @@ class Landing extends Component {
         
         const dec_dim = (scrollHt - scrollPos) / scrollHt;
         const inc_dim = (scrollHt + scrollPos) / scrollHt;
-        text.style.transform = `translateY(${scrollPos*0.75}px) scale(${dec_dim})`;
-        planet_wrapper.style.height = `${inc_dim*(scrollHt*1.5/2)}px`;
+        const planet_height = (scrollHt + scrollPos) * (Math.max(0.5, inc_dim)) * 0.5;
+        text.style.transform = `translateY(${scrollPos*0.55}px) scale(${dec_dim})`;
+        planet_wrapper.style.height = `${planet_height}px`;
         planet_wrapper.style.transform = `scale(${dec_dim*0.75})`;
         planet_wrapper.style.bottom = `-2rem`;
         
-        if(scrollPos<150) {
-            planet_wrapper.style.height = `${scrollHt * 0.5 * inc_dim}px`;
-            planet_wrapper.style.transform = `scale(${dec_dim * 0.9})`;
+        if(scrollPos>scrollHt) {
+            document.querySelector('.landing--wrapper').style.visibility = 'hidden';
         }
     }
 
@@ -42,7 +42,6 @@ class Landing extends Component {
                     <img src={planet} alt='' className='landing--planet--img' />
                 </div>
                 <div className='landing'>
-                    {/* <div className='landing__primary'>Hey! It's me, Brij....</div> */}
                     <div className='landing__primary'>Brijgopal Bharadwaj</div>
                     <div className='landing__typer'>
                         <div className='landing__typer--line1'>

@@ -1,0 +1,67 @@
+{
+    "experience": [
+        {
+            "type": "Internship",
+            "title": "Full Stack Developer",
+            "workplace": "CamCann Smart System Technology Pvt. Ltd.",
+            "address": "Technology Business Incubator (VIT-TBI), VIT Vellore, Tamil Nadu, India",
+            "from": "July 2019",
+            "to": "Feb 2020",
+            "website": "https://camcann.com/",
+            "resources": [
+                {
+                    "title": "Display",
+                    "link": "https://wallpaperplay.com/walls/full/f/f/1/122862.jpg"
+                },
+                {
+                    "title": "Certificate of Completion",
+                    "link": ""
+                },
+                {
+                    "title": "Letter of Recommendation",
+                    "link": ""
+                }
+            ],
+            "description": [
+                "Developed three web-applications, using the MERN stack.",
+                "The first app was used to control the targeted ad-boards, to allow advertisers to customize the functional attributes of the ads being displayed.",
+                "The second app was used to access the CCTV cameras of VIT campus, to provide a single integrated interface for observing and controlling the feeds from cameras manufactured by different vendors.",
+                "The third app was used to monitor the student’s attention during online learning and report the relevant statistics, respectively."
+            ]
+        },
+        {
+            "type": "Internship",
+            "title": "Software Intern",
+            "workplace": "Beam Diagnostics & Coolant Systems Division",
+            "address": "Raja Ramanna Centre for Advanced Technology (RRCAT), Department of Atomic Energy (DAE), Indore, Madhya Pradesh, India",
+            "from": "May 2019",
+            "to": "June 2019",
+            "website": "https://www.rrcat.gov.in/",
+            "resources": [
+                {
+                    "title": "Display",
+                    "link": "https://wallpaperset.com/w/full/f/6/b/171251.jpg"
+                },
+                {
+                    "title": "Certificate of Completion",
+                    "link": ""
+                },
+                {
+                    "title": "Letter of Recommendation",
+                    "link": ""
+                },
+                {
+                    "title": "Application Screenshots",
+                    "link": ""
+                }
+            ],
+            "description": [
+                "Developed a GUI-based MATLAB application for the identification of beam state for the INDUS-2 SRS particle accelerator (a national facility).",
+                "The application combines the concepts of the supervised & unsupervised learning approaches, and the data-mining principles, to gain insights by analyzing the historical data.",
+                "It programmatically accesses the beam-diagnostics data being logged onto the SRS2 data-servers in real-time, to perform classification based upon the results of the clustering analysis, to identify the current state of the particle accelerator.",
+                "The obtained results are graphically represented, along with the recently recorded observations, to facilitate rapid comparative analysis, along with the identification parameters for easy verification.",
+                "The developed application facilitates better diagnostics, to observe the feedback of the corrective beam alignment operations."
+            ]
+        }
+    ]
+}
