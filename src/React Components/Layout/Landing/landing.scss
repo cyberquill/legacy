@@ -1,4 +1,4 @@
-$planet-dimensions: 500vw;
+$planet-dimensions: 100vw;
 
 .landing {
     position: absolute;
@@ -13,10 +13,10 @@ $planet-dimensions: 500vw;
     align-items: center;
     justify-content: center;
 
-    &__name {
+    &__primary {
         width: fit-content;
         color: white;
-        font-size: 6rem;
+        font-size: 8rem;
         font-family: 'Kaushan Script', cursive;
         padding-bottom: 2rem;
         text-shadow: -0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.7);
@@ -29,12 +29,12 @@ $planet-dimensions: 500vw;
     }
 
     &__typer {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Roboto', monospace;
+        color: rgb(176, 179, 212);
         padding-bottom: 3rem;
         font-size: 1.5vw;
-        font-weight: 700;
         white-space: nowrap;
-        letter-spacing: 0.16vw;
+        letter-spacing: 0.35rem;
         display: inline-block;
         box-sizing: border-box;
         display: flex;
@@ -62,41 +62,44 @@ $planet-dimensions: 500vw;
         }
     }
 
+    &__btn {
+        background: transparent;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        text-align: center;
+        padding: 1rem 0;
+        width: 40%;
+        border: 0.2rem solid white;
+        transition: all 0.3s ease;
 
-
-
-
-    &--bg {
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-        position: relative;
-        background: white;
-
-        &__particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #111124;
-            height: 100%;
-            z-index: -7;
+        &:hover {
+            background: white;
+            color: #212144;
         }
 
-        &__planet {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 50%;
-            overflow: hidden;
-            z-index: -5;
+        &-grp {
+            width: 40%;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 
-            &--img {
-                max-width: $planet-dimensions;
-                max-height: $planet-dimensions;
-                animation: rotation 150s infinite linear;
-            }
+    &--planet {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 50%;
+        // overflow: hidden;
+        transition: all 0.5s ease;
+
+        &--img {
+            width: $planet-dimensions;
+            height: $planet-dimensions;
+            animation: rotation 150s infinite linear;
         }
     }
 
@@ -106,7 +109,6 @@ $planet-dimensions: 500vw;
         position: relative;
     }
 }
-
 
 // ============================================================================
 
@@ -130,38 +132,13 @@ $planet-dimensions: 500vw;
 }
 
 @keyframes rotation {
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(359deg);
-	}
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 
 $landing-padding-top: 25vh;
