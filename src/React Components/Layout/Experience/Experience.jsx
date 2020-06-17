@@ -8,9 +8,9 @@ class Experience extends Component {
         super(props);
         this.state = {};
         this.colors = [
-            ['#7ed56f', '#28b485'],
             ['#ffb900', '#ff7730'],
             ['#2998ff', '#5643fa'],
+            ['#7ed56f', '#28b485'],
         ];
     }
 
@@ -26,7 +26,7 @@ class Experience extends Component {
                         ${this.colors[i][0]},
                         ${this.colors[i][1]}
                     ),
-                    url(${experience[i].resources[0].link})`;
+                    url(${experience[i].display})`;
         }
 
         const card_backs = document.querySelectorAll('.experience__card__side--back');
@@ -58,23 +58,41 @@ class Experience extends Component {
                     </h4>
                     <div className='experience__card__details'>
                         <ul>
-                            <li>3 day tours</li>
-                            <li>Up to 30 people</li>
-                            <li>2 tour guides</li>
-                            <li>Sleep in cozy hotels</li>
-                            <li>Difficulty: easy</li>
+                            <li>{item.type} at</li>
+                            <li>{item.workplace}</li>
+                            <li>{item.address}</li>
+                            <li>
+                                {item.from} - {item.to}
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div className='experience__card__side experience__card__side--back'>
                     <div className='experience__card__cta'>
-                        <div className='experience__card__price-box'>
-                            <p className='experience__card__price-only'>Only</p>
-                            <p className='experience__card__price-value'>$297</p>
+                        <div className='experience__card__link-grp'>
+                            {item.resources.map(
+                                (obj, id) =>
+                                    (
+                                        <a
+                                            href={obj.link}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='experience__card__link'
+                                            key={`link${index}${id}`}>
+                                            {obj.title}
+                                        </a>
+                                    ),
+                            )}
                         </div>
-                        <a href='#popup' className='btn btn--white'>
-                            Book now!
-                        </a>
+                        <ul className='experience__card__description'>
+                            {item.description.map((line, id) => (
+                                <li
+                                    className='experience__card__description--line'
+                                    key={`line${index}${id}`}>
+                                    {line}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -83,7 +101,7 @@ class Experience extends Component {
             <div className='experience--wrapper'>
                 <div className='experience--planet'></div>
                 <div className='experience'>
-                    <div className="experience__heading">Experience</div>
+                    <div className='experience__heading'>Experience</div>
                     <div className='experience__card--wrapper'>{experienceCards}</div>
                 </div>
             </div>

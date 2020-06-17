@@ -2,24 +2,21 @@
     "experience": [
         {
             "type": "Internship",
-            "title": "Full Stack Developer",
+            "title": "Full - Stack Developer",
             "workplace": "CamCann Smart System Technology Pvt. Ltd.",
             "address": "Technology Business Incubator (VIT-TBI), VIT Vellore, Tamil Nadu, India",
             "from": "July 2019",
             "to": "Feb 2020",
+            "display": "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/81124021_2700372473362763_6357871673458294784_n.jpg?_nc_cat=105&_nc_sid=dd9801&_nc_ohc=2bG8ngMgRgwAX_aufRB&_nc_ht=scontent.fbho1-1.fna&oh=a36576cf9923522c2a8038a3e5adbf7c&oe=5F0EFAF5",
             "website": "https://camcann.com/",
             "resources": [
                 {
-                    "title": "Display",
-                    "link": "https://wallpaperplay.com/walls/full/f/f/1/122862.jpg"
-                },
-                {
                     "title": "Certificate of Completion",
-                    "link": ""
+                    "link": "#"
                 },
                 {
                     "title": "Letter of Recommendation",
-                    "link": ""
+                    "link": "#"
                 }
             ],
             "description": [
@@ -33,22 +30,19 @@
             "type": "Internship",
             "title": "Software Intern",
             "workplace": "Beam Diagnostics & Coolant Systems Division",
-            "address": "Raja Ramanna Centre for Advanced Technology (RRCAT), Department of Atomic Energy (DAE), Indore, Madhya Pradesh, India",
+            "address": "RRCAT, Department of Atomic Energy (DAE), Indore, Madhya Pradesh, India",
             "from": "May 2019",
             "to": "June 2019",
+            "display": "https://github.com/brij1999/resource-links/raw/master/rrcat_logo.png",
             "website": "https://www.rrcat.gov.in/",
             "resources": [
                 {
-                    "title": "Display",
-                    "link": "https://wallpaperset.com/w/full/f/6/b/171251.jpg"
-                },
-                {
                     "title": "Certificate of Completion",
-                    "link": ""
+                    "link": "#"
                 },
                 {
                     "title": "Letter of Recommendation",
-                    "link": ""
+                    "link": "#"
                 },
                 {
                     "title": "Application Screenshots",

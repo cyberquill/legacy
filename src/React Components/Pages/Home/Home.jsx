@@ -5,6 +5,7 @@ import './home.scss';
 import Landing from '../../Layout/Landing/Landing';
 import Experience from '../../Layout/Experience/Experience';
 import RocketLoader from '../../Layout/RocketLoader/RocketLoader';
+import Projects from '../../Layout/Projects/Projects';
 
 class Home extends Component {
     constructor(props) {
@@ -27,9 +28,9 @@ class Home extends Component {
         return (
             <>
                 <div className='home--bg'>
-                    <div id='stars'></div>
+                    {/* <div id='stars'></div>
                     <div id='stars2'></div>
-                    <div id='stars3'></div>
+                    <div id='stars3'></div> */}
                 </div>
 
                 <TransitionGroup component={null}>
@@ -48,6 +49,7 @@ class Home extends Component {
                             <div className='home'>
                                 <Landing />
                                 <Experience />
+                                <Projects />
                             </div>
                         </CSSTransition>
                     )}
