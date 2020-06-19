@@ -6,6 +6,7 @@ import Landing from '../../Layout/Landing/Landing';
 import Experience from '../../Layout/Experience/Experience';
 import RocketLoader from '../../Layout/RocketLoader/RocketLoader';
 import Projects from '../../Layout/Projects/Projects';
+import Certifications from '../../Layout/Certifications/Certifications';
 
 class Home extends Component {
     constructor(props) {
@@ -50,6 +51,7 @@ class Home extends Component {
                                 <Landing />
                                 <Experience />
                                 <Projects />
+                                <Certifications />
                             </div>
                         </CSSTransition>
                     )}
