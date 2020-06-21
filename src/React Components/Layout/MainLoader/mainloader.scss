@@ -1,0 +1,200 @@
+@import '../../../mixins.scss';
+$eisenfoxLoader-dimensions: 70vh;
+$circle-dimensions: 25vh;
+$darker-color: #a3b1c699;
+$lighter-color: #ffffff80;
+$primary-color: #e0e5ec;
+
+@include respond(tab-port) {
+    $eisenfoxLoader-dimensions: 80vw;
+}
+
+.mainloader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $primary-color;
+
+    &__circle {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(#000, 0.3),
+            inset -0.3rem -0.3rem 0.8rem rgba(#fff, 0.4);
+        font-size: 10rem;
+        background: #ff0900;
+        animation: bg-change 20s infinite ease;
+
+        &--wrapper {
+            position: absolute;
+            width: $circle-dimensions;
+            height: $circle-dimensions;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background: $primary-color;
+            box-shadow: 0.9rem 0.9rem 1.6rem $darker-color, -0.9rem -0.9rem 1.6rem $lighter-color;
+        }
+    }
+
+    &__centerloader {
+        position: relative;
+        width: 0.15em;
+        height: 0.15em;
+        background-color: white;
+        border-radius: 100%;
+        animation: spin 15s infinite linear;
+
+        &::before,
+        &::after {
+            content: '';
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:before {
+            width: 0.3em;
+            height: 1em;
+            animation: jettify 0.8s linear infinite;
+        }
+        &:after {
+            width: 1em;
+            height: 0.3em;
+            animation: jettify 1.2s linear infinite;
+        }
+    }
+
+    .eisenfoxLoader {
+        position: relative;
+        width: $eisenfoxLoader-dimensions;
+        height: $eisenfoxLoader-dimensions;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-width: 0.4rem;
+            border-style: solid;
+            border-radius: 50%;
+        }
+
+        &-2 {
+            &:before {
+                width: $eisenfoxLoader-dimensions;
+                height: $eisenfoxLoader-dimensions;
+                border-color: #999;
+                top: 0px;
+                left: 0px;
+                animation: eisenfoxLoader_scale 3s linear 0s infinite;
+            }
+
+            &:after {
+                width: $eisenfoxLoader-dimensions;
+                height: $eisenfoxLoader-dimensions;
+                border-color: #999;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                animation: eisenfoxLoader_scale 3s linear 0.7s infinite;
+            }
+        }
+
+        &--wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include respond(tab-port) {
+        }
+    }
+}
+
+@keyframes eisenfoxLoader_scale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes bg-change {
+    0% {
+        background: #ff0900;
+    }
+    16% {
+        background: #ff7f00;
+    }
+    32% {
+        background: #e0d100;
+    }
+    40% {
+        background: #01ce19;
+    }
+    64% {
+        background: #00a2ff;
+    }
+    80% {
+        background: #0051ff;
+    }
+    96% {
+        background: #a800ff;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes jettify {
+    0% {
+        box-shadow: 0.04em -0.04em 0 0.02em white;
+    }
+    25% {
+        box-shadow: 0.04em 0.04em 0 0.02em white;
+    }
+    50% {
+        box-shadow: -0.04em 0.04em 0 0.02em white;
+    }
+    75% {
+        box-shadow: -0.04em -0.04em 0 0.02em white;
+    }
+    100% {
+        box-shadow: 0.04em -0.04em 0 0.02em white;
+    }
+}
